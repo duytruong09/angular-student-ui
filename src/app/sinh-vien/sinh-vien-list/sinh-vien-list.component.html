@@ -1,0 +1,53 @@
+<div class="container mt-2">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Họ tên</th>
+        <th scope="col">Ngày sinh</th>
+        <th scope="col">Nữ</th>
+        <th scope="col">Học bổng</th>
+        <th scope="col">Tỉnh</th>
+        <th class="text-center" scope="col-4"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of sinhVien">
+        <td>{{ item.hoTen }}</td>
+        <td>{{ item.ngaySinh }}</td>
+        <td>{{ item.nu }}</td>
+        <td>{{ item.hocBong }}</td>
+        <td>{{ item.tinh }}</td>
+        <td class="text-center">
+          <button type="button" class="btn btn-light">
+            <a class="link-success link-offset-2 link-offset-2 link-underline link-underline-opacity-0" href="https://google.com">search</a>
+          </button>
+        <td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<!-- <div class = 'container mt-2'>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col" *ngFor="let item of sinhVien">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{item.hoTen}}</h5>
+          <p class="card-text">
+            <b>Ngày sinh: </b>{{item.ngaySinh}}
+          </p>
+          <p class="card-text">
+            <b>Nữ: </b>{{item.nu}}
+          </p>
+          <p class="card-text">
+            <b>Học bổng: </b>{{item.hocBong}}
+          </p>
+          <p class="card-text">
+            <b>Tỉnh: </b>{{item.tinh}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
