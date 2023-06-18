@@ -1,5 +1,10 @@
 <div class="container mt-2">
-  <table class="table table-bordered table-striped">
+  <div class="row mt-5">
+    <div class="d-flex justify-content-end">
+      <a class="btn btn-success" routerLink="/sinh-vien-create">Tạo mới</a>
+    </div>
+  </div>
+  <table class="table table-bordered table-striped mt-2">
     <thead>
       <tr>
         <th scope="col">Họ tên</th>
@@ -18,36 +23,34 @@
         <td>{{ item.hocBong }}</td>
         <td>{{ item.tinh }}</td>
         <td class="text-center">
-          <button type="button" class="btn btn-light">
-            <a class="link-success link-offset-2 link-offset-2 link-underline link-underline-opacity-0" href="https://google.com">search</a>
+            <a
+              class="btn btn-outline-success me-2 link-offset-2 link-underline link-underline-opacity-0"
+              [routerLink]="['sinh-vien-update', item._id]"
+              >edit</a
+            >
+          <button type="button" class="btn btn-outline-danger" (click)="openDeleteModal(item._id)">
+            <div class="--bs-danger">Delete</div>
           </button>
-        <td>
+        </td>
       </tr>
-    </tbody>
   </table>
 </div>
 
-
-<!-- <div class = 'container mt-2'>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" *ngFor="let item of sinhVien">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">{{item.hoTen}}</h5>
-          <p class="card-text">
-            <b>Ngày sinh: </b>{{item.ngaySinh}}
-          </p>
-          <p class="card-text">
-            <b>Nữ: </b>{{item.nu}}
-          </p>
-          <p class="card-text">
-            <b>Học bổng: </b>{{item.hocBong}}
-          </p>
-          <p class="card-text">
-            <b>Tỉnh: </b>{{item.tinh}}
-          </p>
-        </div>
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Warning</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure to delete this item?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" (click)="delete()">Confirm Delete</button>
       </div>
     </div>
   </div>
-</div> -->
+</div>
