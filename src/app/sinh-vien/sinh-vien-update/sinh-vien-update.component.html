@@ -1,0 +1,72 @@
+<div class="container mt-2">
+  <legend>Update</legend>
+  <form>
+    <div class="mb-3">
+      <label for="txtHoTen" class="form-label">Họ và tên</label>
+      <input
+        type="text"
+        class="form-control"
+        id="hoTen"
+        aria-describedby="emailHelp"
+        name="hoTen"
+        [(ngModel)]="sinhVien.hoTen"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="txtNgaySinh" class="form-label">Ngày sinh</label>
+      <input
+        type="text"
+        class="form-control"
+        id="ngaySinh"
+        aria-describedby="emailHelp"
+        name="ngaySinh"
+        [(ngModel)]="sinhVien.ngaySinh"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="txtNu" class="form-label">Nữ</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nu"
+        aria-describedby="emailHelp"
+        name="nu"
+        [(ngModel)]="sinhVien.nu"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="txtHocBong" class="form-label">Học bổng</label>
+      <input
+        type="text"
+        class="form-control"
+        id="hocBong"
+        aria-describedby="emailHelp"
+        name="hocBong"
+        [(ngModel)]="sinhVien.hocBong"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="txtTinh" class="form-label">Tỉnh</label>
+      <input
+        type="text"
+        class="form-control"
+        id="tinh"
+        aria-describedby="emailHelp"
+        name="tinh"
+        [(ngModel)]="sinhVien.tinh"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="txtMaLop" class="form-label">Mã Lớp</label>
+      <input
+        type="text"
+        class="form-control"
+        id="maLop"
+        aria-describedby="emailHelp"
+        name="maLop"
+        [(ngModel)]="sinhVien.maLop"
+      />
+    </div>
+    <button type="button" class="btn btn-primary" (click)="update()">Update</button>
+  </form>
+</div>
